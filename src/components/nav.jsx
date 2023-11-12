@@ -1,6 +1,7 @@
 import { Link } from "react-scroll";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import {CiMenuFries } from "react-icons/ci";
 const Nav = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -34,7 +35,7 @@ const Nav = () => {
             </li>
           </Link>
         </ul>{" "}
-        spy={true} smooth={true}
+  
       </div>
     </>
   );
@@ -44,7 +45,7 @@ const Nav = () => {
         <div className="flex item-center flex-1">
           <span className="text-3xl font-bold">logo</span>
         </div>
-        <div className="lg:flex md:flex lg:flex-1 items center justify-end font-nor">
+        <div className="lg:flex md:flex lg:flex-1 items center justify-end font-normal hidden">
           <div className="flex-10">
             <ul className="flex gap-8 mr-16 text-[18px]">
               <Link spy={true} smooth={true} to="Home">
@@ -77,7 +78,7 @@ const Nav = () => {
         </div>
         <div>{click && content}</div>
         <button className="block sm:hidden transition" onClick={handleClick}>
-          {click ? <FaTimes /> : <FaBars />}
+          {click ? <FaTimes /> : <CiMenuFries />}
         </button>
       </div>
     </nav>
